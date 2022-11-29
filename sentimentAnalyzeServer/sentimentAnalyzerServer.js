@@ -23,7 +23,7 @@ function getNLUInstance() {
     You can refer to the image in the instructions document
     to do the same.*/
 
-    const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1');
+    const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding-oe/v1');
     const { IamAuthenticator } = require('ibm-watson/auth');
 
     const naturalLanguageUnderstanding = new NaturalLanguageUnderstandingV1({
@@ -151,6 +151,6 @@ app.get("/text/sentiment", (req,res) => {
     });
 
 
-let server = app.listen(8080, () => {
+let server = app.listen(3000, () => {
     console.log('Listening', server.address().port)
 })
